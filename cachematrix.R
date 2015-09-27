@@ -1,4 +1,4 @@
-####Author JRSanders
+####Caching The Inverse Of A Matrix---------Sanders, J.R.
 ###################START OF FUNCTION 1 makeCacheMatrix##################
 makeCacheMatrix<-function(a,b,c,d,rowm,colm) {
  
@@ -7,9 +7,9 @@ makeCacheMatrix<-function(a,b,c,d,rowm,colm) {
  ww
  enverta = solve(ww)
  mframe<-data.frame(ww,enverta)
- ######Global Assignment Made aka Caching of Inverse########################
+ ######Global Assignment Made aka Caching of Inverse###
  envert<<-solve(ww)
- ##########################################################################
+ ################
  mframe
    }
 
@@ -27,8 +27,8 @@ B<-envert
            iden<-data.frame(B,invec)
            iden  
          }  else {
+            print("Cached Does Not Match New")
             print("Original Matrix Cached Inverse And New Matrix Inverse")
-            
           #  C<-matrix(invec,nrow=2,ncol=2,byrow=TRUE)
             # invert<-solve(invec)
             newinvec<-data.frame(B,invec)
@@ -36,7 +36,7 @@ B<-envert
          }
 }
 #################################################
-######Input To Cached Matrix That Is Whose Inverse Is Created makeCache####
+######Input To Cached Matrix  Whose Inverse Is Created In makeCache####
 #Section 3################## Input for function 1 Cached Matrix###############################
 makeCacheMatrix(8,9,10,11,2,2)
 beforeinversematrix=matrix(c(8,9,10,11),nrow=2,ncol=2,byrow=TRUE)
